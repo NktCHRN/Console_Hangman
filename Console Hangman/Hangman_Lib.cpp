@@ -200,7 +200,7 @@ std::vector<std::pair<std::string, std::vector<std::string>>> read_words(std::st
 
 void trim_back(std::string *s) {
 	int pos = (*s).size() - 1;
-	while ((*s)[pos] == ' ') {
+	while (pos >= 0 && (*s)[pos] == ' ') {
 		(*s).pop_back();
 		pos--;
 	}
@@ -282,7 +282,7 @@ bool play_round(std::string topic, std::string word) {
 	std::string encrypted = encrypt_word(word);
 	std::string used = "";
 	char letter = 0;
-	int win = 1;
+	bool win = 1;
 	int hangman_stage = 0;
 	while (hangman_stage != 8 && encrypted != word) {
 		print_hangman(hangman_stage, add_spaces(topic), add_spaces(encrypted), used);
