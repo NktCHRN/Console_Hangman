@@ -8,9 +8,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 	case -1:
 		std::cout << center_word("YOU WON!!!", 60) << std::endl;
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |" << std::setw(29) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |" << std::setw(29) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |     @" << std::endl;
 		std::cout << "   |   \\-|-/" << center_word("Letters left:", 41) << std::endl;
 		std::cout << "   |     |" << center_word(print_alpha(used, 1), 45) << std::endl;
@@ -19,9 +19,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 0:
 		std::cout << std::endl;
-		std::cout << std::setw(34) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << std::setw(34) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << std::endl;
-		std::cout << std::setw(33) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << std::setw(33) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << std::endl;
 		std::cout << center_word("Letters left:", 65) << std::endl;
 		std::cout << center_word(print_alpha(used, 1), 65) << std::endl;
@@ -30,9 +30,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 1:
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |" << std::setw(29) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |" << std::setw(29) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |" << std::endl;
 		std::cout << "   |" << center_word("Letters left:", 57) << std::endl;
 		std::cout << "   |" << center_word(print_alpha(used, 1), 57) << std::endl;
@@ -41,9 +41,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 2:
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |" << std::endl;
 		std::cout << "   |" << center_word("Letters left:", 57) << std::endl;
 		std::cout << "   |" << center_word(print_alpha(used, 1), 57) << std::endl;
@@ -52,9 +52,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 3:
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |	 |" << std::endl;
 		std::cout << "   |     |" << center_word("Letters left:", 45) << std::endl;
 		std::cout << "   |" << center_word(print_alpha(used, 1), 57) << std::endl;
@@ -63,9 +63,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 4:
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |   /-|" << std::endl;
 		std::cout << "   |     |" << center_word("Letters left:", 45) << std::endl;
 		std::cout << "   |" << center_word(print_alpha(used, 1), 57) << std::endl;
@@ -74,9 +74,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 5:
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |   /-|-\\" << std::endl;
 		std::cout << "   |     |" << center_word("Letters left:", 45) << std::endl;
 		std::cout << "   |" << center_word(print_alpha(used, 1), 57) << std::endl;
@@ -85,9 +85,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 6:
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |   /-|-\\" << std::endl;
 		std::cout << "   |     |" << center_word("Letters left:", 45) << std::endl;
 		std::cout << "   |    /" << center_word(print_alpha(used, 1), 47) << std::endl;
@@ -96,9 +96,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 		break;
 	case 7:
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |     @" << std::setw(23) << "Your word:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |   /-|-\\" << std::endl;
 		std::cout << "   |     |" << center_word("Letters left:", 45) << std::endl;
 		std::cout << "   |    / \\" << center_word(print_alpha(used, 1), 43) << std::endl;
@@ -108,9 +108,9 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 	case 8:
 		std::cout << center_word("YOU LOST!!!", 60) << std::endl;
 		std::cout << "   |" << std::endl;
-		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(topic.size() + 4) << topic << std::endl;
+		std::cout << " --+-----+" << std::setw(24) << "Your topic:" << std::setw(static_cast<std::streamsize>(topic.size()) + 4) << topic << std::endl;
 		std::cout << "   |     |" << std::endl;
-		std::cout << "   |    @/" << std::setw(23) << "Your word was:" << std::setw(word.size() + 5) << word << std::endl;
+		std::cout << "   |    @/" << std::setw(23) << "Your word was:" << std::setw(static_cast<std::streamsize>(word.size()) + 5) << word << std::endl;
 		std::cout << "   |   /-|-\\" << std::endl;
 		std::cout << "   |     |" << center_word("Letters left:", 45) << std::endl;
 		std::cout << "   |    / \\" << center_word(print_alpha(used, 1), 43) << std::endl;
@@ -120,10 +120,10 @@ void print_hangman(int stage, std::string topic, std::string word, std::string u
 	}
 }
 
-std::string center_word(std::string word, int width) {
+std::string center_word(std::string word, unsigned int width) {
 	std::string word_with_spaces = word;
 	if (width > word.size()) {
-		for (int i = 0; i < width - word.size(); i++) {
+		for (size_t i = 0; i < width - word.size(); i++) {
 			if (i % 2 == 0)
 				word_with_spaces.insert(0, " ");
 			else
@@ -146,7 +146,7 @@ std::string print_alpha(std::string used, int mode) {
 		temp = "   z x c v b n m   ";
 		break;
 	}
-		for (int i = 0; i < temp.size(); i++)
+		for (size_t i = 0; i < temp.size(); i++)
 			if (temp[i] != ' ' && used.find(temp[i]) != -1)
 				temp.replace(i, 1, " ");
 	return temp;
@@ -167,7 +167,7 @@ std::vector<std::pair<std::string, std::vector<std::string>>> read_words(std::st
 			if (line.size() > 0) {
 				word = "";
 				if (line[0] == '!') {
-					for (int i = 1; i < line.size(); i++) {
+					for (size_t i = 1; i < line.size(); i++) {
 						if (!isspace(line[i]) && line[i] != '#')
 							word += line[i];
 						else if (line[i] == '#')
@@ -179,7 +179,7 @@ std::vector<std::pair<std::string, std::vector<std::string>>> read_words(std::st
 					}
 				}
 				else if (row >= 0) {
-					for (int i = 0; i < line.size(); i++) {
+					for (size_t i = 0; i < line.size(); i++) {
 						if (isalpha(line[i]))
 							word += tolower(line[i]);
 						else if (line[i] == '#')
@@ -207,7 +207,7 @@ void trim_back(std::string *s) {
 }
 
 void remove_empty(std::vector<std::pair<std::string, std::vector<std::string>>>& dictionary) {
-	int pos = 0;
+	size_t pos = 0;
 	while (pos < dictionary.size()) {
 		if (dictionary[pos].second.empty()) {
 			dictionary[pos].swap(dictionary[dictionary.size() - 1]);
@@ -232,14 +232,14 @@ std::string rand_word(std::vector<std::pair<std::string, std::vector<std::string
 
 std::string encrypt_word(std::string word) {
 	std::string encrypted_word = "";
-	for (int i = 0; i < word.size(); i++)
+	for (size_t i = 0; i < word.size(); i++)
 		encrypted_word += "_";
 	return encrypted_word;
 }
 
 std::string add_spaces(std::string word) {
 	std::string new_word = "";
-	for (int i = 0; i < word.size(); i++) {
+	for (size_t i = 0; i < word.size(); i++) {
 		new_word.push_back(word[i]);
 		new_word += " ";
 	}
@@ -281,7 +281,7 @@ void print_rules() {
 bool play_round(std::string topic, std::string word) {
 	std::string encrypted = encrypt_word(word);
 	std::string used = "";
-	char letter;
+	char letter = 0;
 	int win = 1;
 	int hangman_stage = 0;
 	while (hangman_stage != 8 && encrypted != word) {
@@ -299,7 +299,7 @@ bool play_round(std::string topic, std::string word) {
 		} while (!isalpha(letter) || used.find(letter) != -1);
 		used += letter;
 		if (word.find(letter) != -1) {
-			for (int i = 0; i < word.size(); i++)
+			for (size_t i = 0; i < word.size(); i++)
 				if (word[i] == letter)
 					encrypted[i] = letter;
 		}
@@ -321,13 +321,11 @@ bool play_round(std::string topic, std::string word) {
 }
 
 void continue_menu(int rounds, int wins) {
-	bool next_round;
-	char choice;
 	system("cls");
 	std::cout << center_word("C o n s o l e  H a n g m a n ", 60) << std::endl;
 	std::cout << std::endl;
 	std::cout << "Rounds:" << std::setw(5) << rounds << std::endl;
 	std::cout << "Wins:" << std::setw(7) << wins << std::setw(7) << std::fixed << std::setprecision(2) << (double)wins / rounds * 100 << "%" << std::endl;
-	std::cout << "Losses:" << std::setw(5) << rounds - wins << std::setw(7) << std::fixed << std::setprecision(2) << (double)(rounds - wins) / rounds * 100 << "%" << std::endl;
+	std::cout << "Losses:" << std::setw(5) << rounds - wins << std::setw(7) << std::fixed << std::setprecision(2) << ((double)rounds - wins) / rounds * 100 << "%" << std::endl;
 	std::cout << std::endl;
 }
