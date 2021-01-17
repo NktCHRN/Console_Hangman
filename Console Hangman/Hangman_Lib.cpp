@@ -325,7 +325,7 @@ void continue_menu(int rounds, int wins) {
 	std::cout << center_word("C o n s o l e  H a n g m a n ", 60) << std::endl;
 	std::cout << std::endl;
 	std::cout << "Rounds:" << std::setw(5) << rounds << std::endl;
-	std::cout << "Wins:" << std::setw(7) << wins << std::setw(7) << std::fixed << std::setprecision(2) << (double)wins / rounds * 100 << "%" << std::endl;
-	std::cout << "Losses:" << std::setw(5) << rounds - wins << std::setw(7) << std::fixed << std::setprecision(2) << ((double)rounds - wins) / rounds * 100 << "%" << std::endl;
+	std::cout << "Wins:" << std::setw(7) << wins << std::setw(7) << std::fixed << std::setprecision(2) << static_cast<double>(wins) / rounds * 100 << "%" << std::endl;
+	std::cout << "Losses:" << std::setw(5) << rounds - wins << std::setw(7) << std::fixed << std::setprecision(2) << (static_cast<double>(rounds) - wins) / rounds * 100 << "%" << std::endl;
 	std::cout << std::endl;
 }
