@@ -188,8 +188,11 @@ std::vector<std::pair<std::string, std::vector<std::string>>> read_words(std::st
 					if (!word.empty())
 						dictionary[row].second.push_back(word);
 				}
-				else
-					std::cout << "Error: Bad read" << std::endl;
+				else {
+					std::cout << "\aError: Bad read - word without topic in line: " << std::endl;
+					std::cout << line << std::endl;
+					system("pause");
+				}
 			}
 		}
 	}
